@@ -8,7 +8,6 @@ def selection_sort(arr):
         for j in range(i+1, len(arr)):
             # go through the array again: O(n)
             # set the smallest item's index to min_index
-            # as long as it is smaller than the current smallest
             if arr[j] < arr[min_index]:
                 min_index = j
         # swap the element at i with the element at min_index
@@ -17,12 +16,20 @@ def selection_sort(arr):
     return arr
 
 
-# TO-DO:  implement the Bubble Sort function below
-
-
+# Bubble Sort time complexity: O(n^2) (average/worst)
 def bubble_sort(arr):
-    # Your code here
-    pass
+    # go through each item in the array (except the last item)
+    for i in range(len(arr)-1):
+        # go through the items up to the last i+1 items
+        # that will already be sorted
+        for j in range(len(arr)-i-1):
+            # if the item at j is greater than
+            # the item at the next index
+            # swap them so that the greatest values
+            # bubble up to the end of the array
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+    return arr
 
 
 '''
