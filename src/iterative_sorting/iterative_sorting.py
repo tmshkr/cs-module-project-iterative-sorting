@@ -29,6 +29,7 @@ def bubble_sort(arr):
             # bubble up to the end of the array
             if arr[j] > arr[j+1]:
                 arr[j], arr[j+1] = arr[j+1], arr[j]
+    # return the sorted array
     return arr
 
 
