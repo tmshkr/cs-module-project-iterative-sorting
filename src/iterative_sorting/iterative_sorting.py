@@ -62,10 +62,10 @@ def counting_sort(arr):
     # create a counter array to count the occurrences
     # of each number in the input array
     counter = [0] * (max(arr) + 1)
-    for item in arr:
-        if item < 0:
+    for num in arr:
+        if num < 0:
             return "Error, negative numbers not allowed in Count Sort"
-        counter[item] += 1
+        counter[num] += 1
 
     # we'll keep track of the total
     # so that we know how many numbers will come before
